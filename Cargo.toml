@@ -1,0 +1,20 @@
+[workspace]
+members = [
+    "crates/*"
+]
+
+[workspace.package]
+authors = ["se-pacifist"]
+edition = "2021"
+rust-version = "1.68"
+
+[profile.dev]
+opt-level = 1
+debug-assertions = false
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+incremental = false
+opt-level = 3

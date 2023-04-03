@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "orion-config",
+  "description": "Config validator for the Orion configuration file",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "allowlist": {
+      "type": "object",
+      "description": "Target operating systems",
+      "properties": {
+        "productId": {
+          "description": "The unique identifier for a product",
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "WindowsTarget": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "default": 11
+        }
+      }
+    }
+  }
+}
